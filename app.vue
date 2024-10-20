@@ -1,5 +1,5 @@
 <template>
   <div>
-    <Button>Click</Button>
+    <UiButton>Click</UiButton>
   </div>
-</template>
+</template> 
