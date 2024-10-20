@@ -1,5 +1,6 @@
 <template>
-  <div>
+  <NuxtLayout name="default">
+    <NuxtWelcome/>
     <UiButton>Click</UiButton>
-  </div>
+  </NuxtLayout>
 </template> 
