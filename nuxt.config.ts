@@ -7,7 +7,8 @@ export default defineNuxtConfig({
     'shadcn-nuxt',
     '@nuxtjs/google-fonts',
     '@nuxt/image',
-    '@nuxt/icon'
+    '@nuxt/icon',
+    '@pinia/nuxt'
   ],
 
   shadcn: {
@@ -25,5 +26,8 @@ export default defineNuxtConfig({
     families: {
       Lato: [400, 700],
     }
+  },
+  pinia: {
+    storesDirs: ['./stores/**']
   }
 })
