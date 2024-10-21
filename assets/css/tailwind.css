@@ -6,24 +6,26 @@
   :root {
     --background: #e8e9eb;
     --foreground: #293241;
+    /* текст на странице */
 
     --muted: #ff0000;
-    --muted-foreground: green;
+    --muted-foreground: #293241;
+    /*  например текст в инпутах */
 
     --popover: 222.2 84% 4.9%;
     --popover-foreground: 210 40% 98%;
 
-    --card: #a8dadc;
+    --card: #ffffff;
     --card-foreground: 210 40% 98%;
 
     --border: 217.2 32.6% 17.5%;
-    --input: 217.2 32.6% 17.5%;
+    --input: #b5b9c2;
 
     --primary: #1dd3b0;
-    --primary-foreground: 222.2 47.4% 11.2%;
+    --primary-foreground: #fff ;
 
     --secondary: #cfcfcf;
-    --secondary-foreground: 210 40% 98%;
+    --secondary-foreground: #293241;
 
     --accent: 217.2 32.6% 17.5%;
     --accent-foreground: 210 40% 98%;
@@ -42,6 +44,6 @@
   }
   body {
     @apply bg-background text-foreground text-base;
-    font-family: 'Lato', sans-serif;
+    font-family: "Lato", sans-serif;
   }
 }
