@@ -10,7 +10,5 @@
       <Icon name="line-md:logout" size="20px" />
     </button>
     <LayoutMenu />
-    <UiButton class="bg-primary text-primary-foreground">click</UiButton>
-    <!-- <uiButton variant="primary">Send</uiButton> -->
   </aside>
 </template>

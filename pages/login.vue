@@ -1,4 +1,6 @@
 <script setup lang="ts">
+import { useLoadingStore } from "~/stores/loading.store";
+
 useSeoMeta({
   //Композабл useSeoMeta позволяет определить SEO-мета-теги вашего сайта в виде плоского объекта с полной поддержкой TypeScript.
   title: "Login | CRM System",
@@ -7,6 +9,13 @@ useSeoMeta({
 const emailRef = ref("");
 const passwordRef = ref("");
 const nameRef = ref("");
+
+const isLoadingStore = useLoadingStore();
+const router = useRouter();
+const login = async () => {
+  isLoadingStore.setLoading(true);
+  await account.createEmailSession(emailRef.value, passwordRef.value);
+}
 </script>
 
 <template>
@@ -16,11 +25,15 @@ const nameRef = ref("");
         <UiInput type="email" placeholder="Email" v-model="emailRef" />
         <UiInput type="password" placeholder="Password" v-model="passwordRef" />
         <UiInput type="name" placeholder="Name" v-model="nameRef" />
-        <div class="flex gap-4">
-          <UiButton class="bg-primary text-primary-foreground" type="button"
+        <div class="flex gap-4 justify-around">
+          <UiButton
+            type="button"
+            class="transition-colors hover:bg-primary hover:text-primary-foreground"
             >Login</UiButton
           >
-          <UiButton class="bg-primary text-primary-foreground" type="button"
+          <UiButton
+            type="button"
+            class="transition-colors hover:bg-primary hover:text-primary-foreground"
             >Register</UiButton
           >
         </div>
