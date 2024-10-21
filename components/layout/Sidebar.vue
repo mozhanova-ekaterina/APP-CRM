@@ -11,5 +11,6 @@
       <Icon name="line-md:logout" size="20px" />
     </button>
     <UiButton>Send</UiButton>
+    <LayoutMenu/>
   </aside>
 </template>

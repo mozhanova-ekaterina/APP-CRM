@@ -86,7 +86,13 @@ module.exports = {
         "collapsible-down": "collapsible-down 0.2s ease-in-out",
         "collapsible-up": "collapsible-up 0.2s ease-in-out",
       },
-      
+      fontSize: {
+        xs: '1rem',
+        sm: '1.25rem',
+        base: '1.3rem',
+        lg: '1.5rem',
+        xl: '2rem'
+      }
     },
   },
   plugins: [animate],
