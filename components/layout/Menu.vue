@@ -1,5 +1,5 @@
 <script lang="ts" setup>
-  import { MENU_DATA } from "./menu.data.ts";
+  import { MENU_DATA } from "./menu.data";
 </script>
 
 <template>
