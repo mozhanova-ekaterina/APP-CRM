@@ -11,7 +11,7 @@ const props = defineProps<{
   <div
     :class="
       cn(
-        'rounded-lg animate bg-card text-card-foreground border transition-shadow hover:shadow-lg',
+        'animate bg-card text-card-foreground border transition-shadow hover:shadow-lg',
         props.class
       )
     "
@@ -21,6 +21,7 @@ const props = defineProps<{
 </template>
 
 <style scoped>
+/* анимация будет работать при рендере автоматически */
 .animate {
   animation: show 0.2s ease-in-out;
 }

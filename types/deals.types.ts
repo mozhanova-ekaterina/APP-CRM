@@ -15,11 +15,11 @@ export interface IComment extends IBaseField {
 }
 
 export enum EnumStatus {
-  'todo' = 'To Do',
+  'todo' = 'todo',
   'to-be-agreed' = 'to-be-agreed',
   'in-progress' = 'in-progress',
   'produced' = 'produced',
-  'done' = 'Done',
+  'done' = 'done',
 }
 
 export interface IDeal extends IBaseField {
