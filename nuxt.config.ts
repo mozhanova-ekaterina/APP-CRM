@@ -8,18 +8,12 @@ export default defineNuxtConfig({
     '@nuxtjs/google-fonts',
     '@nuxt/image',
     '@nuxt/icon',
-    '@pinia/nuxt'
+    '@pinia/nuxt',
+    '@vee-validate/nuxt'
   ],
 
   shadcn: {
-    /**
-     * Prefix for all the imported component
-     */
     prefix: 'ui',
-    /**
-     * Directory that the component lives in.
-     * @default "./components/ui"
-     */
     componentDir: './components/ui'
   },
   googleFonts: {
@@ -29,5 +23,8 @@ export default defineNuxtConfig({
   },
   pinia: {
     storesDirs: ['./stores/**']
+  },
+  veeValidate: {
+    autoImports: true
   }
 })
