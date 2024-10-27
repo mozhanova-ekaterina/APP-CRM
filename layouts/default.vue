@@ -17,7 +17,7 @@ onMounted(async () => {
 
 <template>
   <LayoutLoader v-if="isLoadingStore.loading" />
-  <section v-else :class="{ grid: store.isAuth }" style="min-height: 100vh">
+  <section v-else :class="{ grid: store.isAuth } " style="min-height: 100vh">
     <LayoutSidebar v-if="store.isAuth" />
     <div class="bg-card px-3">
       <slot />

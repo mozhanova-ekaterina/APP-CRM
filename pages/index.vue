@@ -14,7 +14,8 @@ useSeoMeta({
 const dragCardRef = ref<ICard | null>(null);
 const sourceColumnRef = ref<IColumn | null>(null);
 const { isPending, data, refetch } = useKanbanQuery();
-const dealStore = useDealSlideStore()
+const dealStore = useDealSlideStore();
+const slideStore = useDealSlideStore()
 
 type TypeMutationVariables = {
   docId: string;
@@ -47,13 +48,10 @@ function handleDrop(targetColumn: IColumn) {
     });
   }
 }
-
 </script>
 
 <template>
-  <div>
-
-  </div>
+  <KanbanSlideover />
   <div class="min-h-screen">
     <h1 class="text-4xl p-5">CRM System</h1>
     <div v-if="isPending">Loading...</div>
@@ -65,14 +63,16 @@ function handleDrop(targetColumn: IColumn) {
         :key="column.id"
         class="h-full-screen"
       >
-        <h2 class="text-center rounded-lg p-1 mb-3" :style="generateGradient(index)">
+        <h2
+          class="text-center rounded-lg p-1 mb-3"
+          :style="generateGradient(index)"
+        >
           {{ column.name }}
         </h2>
         <div></div>
         <KanbanCreateDeal :refetch="refetch" :status="column.id" />
         <div class="flex flex-col gap-2">
           <UiCard
-          @click="handle"
             @dragstart="handleDragStart(card, column)"
             @dragover="handleDragOver"
             @drop="handleDrop(column)"
@@ -80,7 +80,7 @@ function handleDrop(targetColumn: IColumn) {
             v-for="card in column.items"
             :key="card.id"
           >
-            <UiCardHeader>
+            <UiCardHeader @click="slideStore.set(card)">
               <UiCardTitle class="border-b pb-2">{{ card.name }}</UiCardTitle>
               <UiCardDescription class="text-xs">{{
                 convertCurrency(card.price)
