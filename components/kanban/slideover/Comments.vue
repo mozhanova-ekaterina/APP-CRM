@@ -17,11 +17,11 @@ const card = data as unknown as IDeal;
       @keyup.enter="writeComment"
       class="bg-transparent"
     />
-    <ul class="flex flex-col gap-3 my-4">
-      <li v-for="comment in card?.comments" class="flex gap-2">
-        <Icon name="material-symbols:mode-comment" />
-        <p class="border rounded-lg px-3 text-xs text-wrap">{{ comment.text }}</p>
-      </li>
-    </ul>
+    <div class="flex flex-col gap-3 my-4">
+      <div v-for="comment in card?.comments" class="flex gap-2">
+        <Icon size="20px" name="material-symbols:mode-comment" />
+        <p class=" basis-[90%] border rounded-lg px-3 text-xs">{{ comment.text }}</p>
+      </div>
+    </div>
   </div>
 </template>
